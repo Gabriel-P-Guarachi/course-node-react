@@ -1,0 +1,400 @@
+{
+	"info": {
+		"_postman_id": "35fac218-124a-4be8-9bf5-b5e672ff3ead",
+		"name": "Node-2version",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Lista de Usuarios",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiYzQyNzRjMjYtNmFkNS00MDBkLTkxZTUtZjAzNGNhMmI1ZGY2IiwibmFtZSI6Im1hcmNlbG8iLCJlbWFpbCI6Im1hcmNlbG8tYWRtaW5Ac2FtcGxlLmNvbSIsInBhc3N3b3JkIjoiJDJiJDEwJEtNR1VxdkxiLjFoVEJMUHE3dXR4QU9rb2kxeXVsOWJzd0NQQVM1OHpCWXIudm05QzU0eVE2Iiwicm9sZSI6IkFETUlOX1JPTEUiLCJzdGF0ZSI6dHJ1ZX0sImlhdCI6MTYwMDI2OTU0MiwiZXhwIjoxNjAyODYxNTQyfQ.atgt5R6saTV-nmtvkXwTjRzgq5xBGY2alG4GH7Mexjk",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear Usuario",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"marcelo\",\r\n    \"email\": \"marcelo-admin@sample.com\",\r\n    \"password\": \"admin123\",\r\n    \"role\": \"ADMIN_ROLE\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener un Usuario",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/users/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"marcelo-admin@sample.com\",\r\n    \"password\": \"admin123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiN2ZiMGYxMjgtYzJmNC00OGZlLWE2YmYtYjdlYzFmZGQ0MTdjIiwibmFtZSI6Im1hcmNlbG8iLCJlbWFpbCI6Im1hcmNlbG8tYWRtaW5Ac2FtcGxlLmNvbSIsInBhc3N3b3JkIjoiJDJiJDEwJHZZUGY1Q1hvZTNzMU16djB0cHVhcHUyc25YYXRlMkFSV3lrNy53eW95UjVpM0ZWMGNOR2lPIiwicm9sZSI6IkFETUlOX1JPTEUiLCJzdGF0ZSI6dHJ1ZX0sImlhdCI6MTYwMDI2OTIwMCwiZXhwIjoxNjAyODYxMjAwfQ.FksNciV1fmtXbyZL-YiPOfhWgsLYDG83H-asSZeyudc",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/users/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar Usuario",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiYzQyNzRjMjYtNmFkNS00MDBkLTkxZTUtZjAzNGNhMmI1ZGY2IiwibmFtZSI6Im1hcmNlbG8iLCJlbWFpbCI6Im1hcmNlbG8tYWRtaW5Ac2FtcGxlLmNvbSIsInBhc3N3b3JkIjoiJDJiJDEwJEtNR1VxdkxiLjFoVEJMUHE3dXR4QU9rb2kxeXVsOWJzd0NQQVM1OHpCWXIudm05QzU0eVE2Iiwicm9sZSI6IkFETUlOX1JPTEUiLCJzdGF0ZSI6dHJ1ZX0sImlhdCI6MTYwMDI2OTU0MiwiZXhwIjoxNjAyODYxNTQyfQ.atgt5R6saTV-nmtvkXwTjRzgq5xBGY2alG4GH7Mexjk",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"marcelo\",\r\n    \"email\": \"marcelo@sample.com\",\r\n    \"password\": \"admin123\",\r\n    \"role\": \"ADMIN_ROLE\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/users/5eda0bd9-5df0-4900-a98a-53583202d9e0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"5eda0bd9-5df0-4900-a98a-53583202d9e0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "P-List of posts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/posts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "P-Obtain one post",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/posts/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"posts",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "P-Create post",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userId\": \"1\",\n    \"title\": \"Post text 1\",\n    \"description\": \"description 1\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/posts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "P-Update post",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Change 1\",\n    \"description\": \"Change description\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/posts/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"posts",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "P-Delete post",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/posts/449bcb55-9b89-4596-90c3-137e968b3d36",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"posts",
+						"449bcb55-9b89-4596-90c3-137e968b3d36"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "P-Obtain comments of one post",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/posts/1/comments",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"posts",
+						"1",
+						"comments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "P-Create comment",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"comment\": \"Add comment 4\",\n    \"author\": \"author 4\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/posts/1/comments",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"posts",
+						"1",
+						"comments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "P-Update comment",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"90fd1b7b-fc5a-4a7d-825a-9aa1aa36eeaf\",\n    \"comment\": \"comment update\",\n    \"author\": \"author update\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/posts/1/comments",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"posts",
+						"1",
+						"comments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "P-Delete comment",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/posts/1/comments/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"posts",
+						"1",
+						"comments",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
